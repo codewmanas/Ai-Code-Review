@@ -2,6 +2,7 @@ import { useState, useEffect, use, useActionState } from 'react'
 import "prismjs/themes/prism-tomorrow.css"
 import Editor from "react-simple-code-editor"
 import prism from "prismjs" 
+import Markdown from 'react-markdown'
 import axios from 'axios'
 import './App.css'
 
@@ -47,18 +48,12 @@ function App() {
         >Review</div>
       </div>
       <div className="right">
-        { 
-          review
-        }
+        <Markdown
+        >{review}</Markdown>
       </div>
     </main>
     </>
   )
-}
-
-
-function sum(){
-  return 1 + 2
 }
 
 export default App
